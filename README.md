@@ -1,1 +1,1 @@
-# CS-251-Notes
+# COMP-251-Notes
