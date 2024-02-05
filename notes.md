@@ -127,3 +127,19 @@ indents dont matter at all
 when numbers are too large for their type, they roll over into the negatives for example 9999999999 would be less than 9, because it reads in that first number as some negative number
 
 function prototype gives a signiture of a function doesnt define the function
+
+there are no strings in c
+
+*man page sections*
+1. command line utilities (ls)
+2. system calls (stat)
+3. library calls (printf)
+
+
+for project 1 (making ls) only have to worry about - or d (file or directory)
+
+&& runs command directly after another
+
+        gcc -o name name.c && name.c
+
+        //this compiles and runs code in one line
