@@ -1,12 +1,15 @@
-COMP 251 NOTES
+>COMP 251 NOTES
 
+
+OS
+-
 OS doesnt run anything until woken up
 to wake the kernal, interupt with: 
 
         ret = write (fd, buff, size);
 
 user mode vs kernal mode
-
+-
 multiprogramming 
  a process is an os abstraction of a running program
  many os's support many programs running concurently
@@ -27,7 +30,7 @@ c interpetor is
         clang -o 
 
 programming contraints
-
+-
 1. comments 
 2. variables - initialization, delceration
 3. I/O functions
@@ -105,10 +108,12 @@ format modifiers for printf
 
 unsighned before an int or double allows for no negative numbers but larger positive range
 
+order of operations
+-
 1. x++ reads variable first then increments
 2. ++x adds first then increments
 
-.
+
 
         sizeof(x)
 
@@ -130,7 +135,8 @@ function prototype gives a signiture of a function doesnt define the function
 
 there are no strings in c
 
-*man page sections*
+man page sections
+-
 1. command line utilities (ls)
 2. system calls (stat)
 3. library calls (printf)
@@ -143,3 +149,98 @@ for project 1 (making ls) only have to worry about - or d (file or directory)
         gcc -o name name.c && name.c
 
         //this compiles and runs code in one line
+ 
+
+types
+-
+- int
+- float
+- char
+- double
+
+arrays
+-
+name x, type int, values set equal to 0
+
+- int x[5] = {0,0,0,0,0};
+- int x[5]; x[0] = 0;
+
+there is no bounds checking in C
+- *"you better get your indexing correct"*
+
+there is not index out of bounds error, rather going out of bounds goes to the next or prev or rather in relation memory in regaurds to how far you have gone. Basically all memory is kinda like a large array and going out of bounds just goes to a peice of memory.
+
+- char [size] x;
+
+sizeof(x) would return size if chars
+but other size if other types, also only works in main
+
+to tell size of an array you can counter variable
+
+1. track size explicitly (direct)
+>- loop through and send length with array into a function
+2. sentinal value
+>- add a single character at the end that tells when to stop a loop for counting '\0'.
+>- name[0]= 'm'; name[1]='e'; name[2]='\0'; withe \0 being the sentinal value
+
+segmentaion fault is when you start acessing memory that you are not supposed to, so if you call a length function on an array with no null terminator, it will go until it finds one, or maybe even never finds it.
+
+STRINGS
+-
+strings can be made of an array of characters or Chars
+
+- char [size] x;
+
+sizeof(x) would return size if chars
+but other size if other types, also only works in main
+
+Look above for parsing and tracking string size
+>string uses
+- Strlen (find length)
+        - returns length of array minus the sentinal value.
+
+- Strcat (concatinate)
+        -
+
+- Strcmp (compare)
+        - returns an int so that of two strings = then val  is 0, if s1 is less than s2 return -num else positive 
+
+- Strcpy (copy)
+        -
+
+- Strdmp (something with pointers)
+        -
+
+
+Truth in C 
+-
+0 = false, everything else is true
+
+        if(operation that = 1){
+                //code executes
+        }
+-
+
+        if(operation that = 0){
+                //code doesnt execute
+        }
+-
+
+        if(s[1] == 'j'){
+                //code executes if that char is j
+        }
+
+Structures
+-
+
+closest thing C has to classes
+
+        struct studentT
+        {
+                char name[65];
+                int age;
+                float gpa;
+                int grad_yr;
+        }
+
+readdir returts a struct
