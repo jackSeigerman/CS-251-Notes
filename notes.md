@@ -244,3 +244,44 @@ closest thing C has to classes
         }
 
 readdir returts a struct
+
+        void display_student(struct student_s s)
+
+        morty.name
+
+int is 4 bytes
+
+        int x;
+
+        06 0000 0000
+        06 0000 0000
+        06 0000 0000
+        06 0000 0000
+
+        //x=0
+
+Pointers
+-
+
+        int * ptr_x
+        //pointer to an int
+
+stores a location to another peice of memory
+
+just a type of variable
+
+all pointers on 64 bit machines are 8 bytes
+
+        char name[64] = "morty";
+
+        //or
+
+        char *name = "Morty Smith"
+*
+
+        char c = 'm'
+        char *c_ptr = &c
+        char c2 = *c_ptr
+        *cptr = 'j'
+
+modify something via address (derefrence)
