@@ -285,3 +285,9 @@ all pointers on 64 bit machines are 8 bytes
         *cptr = 'j'
 
 modify something via address (derefrence)
+
+        int n = 8;
+        int * ptr;
+        ptr = &n; //&= address
+        int x = *ptr; // derefrencing
+        *ptr = 10; // stores 10 for n
