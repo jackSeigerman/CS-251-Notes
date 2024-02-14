@@ -202,7 +202,8 @@ Look above for parsing and tracking string size
 - Strcat (concatinate)
         -
 
-- Strcmp (compare)
+- 
+ (compare)
         - returns an int so that of two strings = then val  is 0, if s1 is less than s2 return -num else positive 
 
 - Strcpy (copy)
@@ -291,3 +292,66 @@ modify something via address (derefrence)
         ptr = &n; //&= address
         int x = *ptr; // derefrencing
         *ptr = 10; // stores 10 for n
+
+bits
+-
+
+        10011010
+doesnt mean anything by itself, needs interpertaion
+dont have enough info
+
+things are just conventions set to interpret certain kinds of data
+
+binary encoding
+
+numaric bases overall
+* decimal - 0 , 1, 2, 3, 4  ...
+* hexidecimal - 0...9, a, b... 10
+* binary - 0, 1, 10, 11, 100
+* octal - 0 ... 7, 
+
+unsigned integer (non negative integer values)
+
+        1011
+
+1 x 2^3
++
+ 0 x 2^2
+ + 
+ 1 x  2^1
+ + 
+ 1 x 2^0
+
+ 1 bit - 2 distinct values - 1
+ 2 bit - 4 distinct values - 3
+ n bit - 2^n distinct values 
+
+ 186
+
+        256 - 0 - 186
+
+        128 -1 - 58
+
+        64 - 0 - 58
+
+        32 -1 -26
+
+        16 - 1 - 10
+
+        8 - 1 - 2
+
+        4 - 0 -2
+
+        2 - 1 - 0
+
+        1 - 0 - 0
+
+ 010111010
+
+        111 011 010
+        rwx -wx -w-
+        chmod 732 file
+
+flip the bits +1 to change sign
+
+overflow bits are ignored
