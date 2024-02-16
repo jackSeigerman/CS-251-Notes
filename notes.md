@@ -209,8 +209,13 @@ Look above for parsing and tracking string size
 - Strcpy (copy)
         -
 
+        char s[10];
+        strcpy(s,"hello");
+
 - Strdmp (something with pointers)
         -
+
+        char s[] = strcat("he","lo")
 
 
 Truth in C 
@@ -355,3 +360,23 @@ unsigned integer (non negative integer values)
 flip the bits +1 to change sign
 
 overflow bits are ignored
+
+memory
+-
+
+var attributes
+1. name
+2. type
+3. value
+4. size
+5. location
+6. lifetime
+7. scope
+
+parts of program memory
+1. os
+2. code
+3. data
+4. heap 
+5. stack - main at bottom (LIFO) last thing to pop
+
