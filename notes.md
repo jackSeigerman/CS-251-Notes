@@ -377,6 +377,23 @@ parts of program memory
 1. os
 2. code
 3. data
-4. heap 
+4. heap - 
 5. stack - main at bottom (LIFO) last thing to pop
+
+memory allocation
+-
+
+malloc
+
+free
+
+void * malloc(size_t, size);
+
+typedef
+
+void pointer is basically just a generic pointer that can point to any type
+
+always cast malloc before using it 
+
+int * intptr = malloc(1000)
 
