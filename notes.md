@@ -397,3 +397,14 @@ always cast malloc before using it
 
 int * intptr = malloc(1000)
 
+
+static vs dynamic mem alloc
+-
+static memory - memory is allocated at compile time
+1. number of array elements is peminatly fixed
+2. allocated in stack or data
+
+synamic memory - memory is allocated at runtime
+1. numer of array elemnts is not fixed
+2. allocated in heap
+
