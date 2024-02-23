@@ -200,10 +200,9 @@ Look above for parsing and tracking string size
         - returns length of array minus the sentinal value.
 
 - Strcat (concatinate)
-        -
+        - merges two strings
 
-- 
- (compare)
+- Strcmp (compare)
         - returns an int so that of two strings = then val  is 0, if s1 is less than s2 return -num else positive 
 
 - Strcpy (copy)
@@ -217,6 +216,10 @@ Look above for parsing and tracking string size
 
         char s[] = strcat("he","lo")
 
+- strdup (duplicate)
+
+
+- strtok (bad)
 
 Truth in C 
 -
@@ -407,4 +410,10 @@ static memory - memory is allocated at compile time
 synamic memory - memory is allocated at runtime
 1. numer of array elemnts is not fixed
 2. allocated in heap
+
+./
+
+absolute path
+-
+        /home/kugele/comp251
 
