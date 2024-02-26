@@ -417,3 +417,28 @@ absolute path
 -
         /home/kugele/comp251
 
+fget for input
+
+file descriptor
+file streams 
+
+standard in, standard out, standard error
+
+standardIn_0_stdin
+
+standardOut_1_stdout
+
+standardError_2_stderr
+
+print f from out
+scan f from in
+puts from error
+
+fprtintf, takes in a file stream
+
+fgets(char *s, int size, File *stream)
+
+need to convert newline into null terminator
+
+need to avoid double loop
+
