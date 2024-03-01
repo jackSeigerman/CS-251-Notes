@@ -442,3 +442,77 @@ need to convert newline into null terminator
 
 need to avoid double loop
 
+process managment
+-
+
+        #include <stdio.h>
+        #include <stdlib.h>
+        #include <string.h>
+        #include <unistd.h>
+        #include <sys/wait.h>
+
+        #define MAX_COMMAND_LENGTH 100
+        #define MAX_ARGUMENTS 10
+
+        int main() {
+        char command[MAX_COMMAND_LENGTH];
+        char *arguments[MAX_ARGUMENTS];
+        int status;
+
+        while (1) {
+                printf("Shell> ");
+                fgets(command, MAX_COMMAND_LENGTH, stdin);
+
+                // Remove newline character from the command
+                command[strcspn(command, "\n")] = '\0';
+
+                // Tokenize the command into arguments
+                char *token = strtok(command, " ");
+                int argIndex = 0;
+                while (token != NULL && argIndex < MAX_ARGUMENTS - 1) {
+                arguments[argIndex] = token;
+                token = strtok(NULL, " ");
+                argIndex++;
+                }
+                arguments[argIndex] = NULL;
+
+                // Fork a child process to execute the command
+                pid_t pid = fork();
+
+                if (pid < 0) {
+                printf("Fork failed.\n");
+                exit(1);
+                } else if (pid == 0) {
+                // Child process
+                execvp(arguments[0], arguments);
+                printf("Command not found.\n");
+                exit(1);
+                } else {
+                // Parent process
+                waitpid(pid, &status, 0);
+                }
+        }
+
+        return 0;
+        }
+
+create a new process
+
+ps - see processes
+
+replace current running program
+
+fork - pid_t(void) o is returned to the child and process id is returned to parent. basically relicates everything about the parent so child can continue onward
+
+man exec - takes exsiting process and replaces it with new process
+
+im waiting to reap my child!
+
+wait(NULL)
+
+need to wait to see if error from child process
+
+with no wait child becomes zombie
+
+if status z then zombie
+
