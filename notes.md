@@ -516,3 +516,15 @@ with no wait child becomes zombie
 
 if status z then zombie
 
+array v structs
+-
+
+arrays 
+* all elements same type
+* acess elements with []
+* contigues memory
+
+structs 
+* elements can have diff types
+* acess elements with ->feild
+* not contigues memory
